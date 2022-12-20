@@ -27,7 +27,7 @@ $keys.click(function() {
     }
     decimal = false;
   }
-  
+
   // operators
   else if ($(this).parent().is('.operators')) {
     var lastChar = output[output.length - 1];
@@ -41,6 +41,8 @@ $keys.click(function() {
     }
     decimal = false;
   }
+
+  
   // decimalen
   else if (keyVal == '.') {
     if (!decimal) {
