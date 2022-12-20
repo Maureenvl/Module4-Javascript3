@@ -15,7 +15,7 @@ $keys.click(function() {
     $screen.html('');
     decimal = false;
   }
-  // equal
+  // gelijk
   else if (keyVal == '=') {
     var equation = output;
     var lastChar = equation[equation.length - 1];
@@ -27,6 +27,8 @@ $keys.click(function() {
     }
     decimal = false;
   }
+
+
   // operators
   else if ($(this).parent().is('.operators')) {
     var lastChar = output[output.length - 1];
@@ -40,7 +42,9 @@ $keys.click(function() {
     }
     decimal = false;
   }
-  // decimal
+
+
+  // decimalen
   else if (keyVal == '.') {
     if (!decimal) {
       $screen.html($screen.html() + keyVal);
@@ -53,6 +57,9 @@ $keys.click(function() {
   }
 })
 
+
+
+// alle keys
 $(window).keydown(function(e) {
   console.log(e.which);
   switch (e.which) {
