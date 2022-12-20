@@ -10,11 +10,16 @@ $keys.click(function() {
 
   console.log(keyVal);
 
+
+
   // clear
   if (keyVal == 'clear') {
     $screen.html('');
     decimal = false;
   }
+
+
+  
   // gelijk
   else if (keyVal == '=') {
     var equation = output;
