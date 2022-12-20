@@ -1,0 +1,149 @@
+/*--------------------
+Reset & body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #feead2, #fff8ee);
+  font-family: Open Sans;
+  font-size: 16px;
+  &:before {
+    content: '';
+    width: 800px;
+    height: 600px;
+    background: #f00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
+
+
+/*--------------------
+Calculator
+--------------------*/
+.calculator {
+  width: 300px;
+  background: linear-gradient(135deg, #fcaf3b, #f25c2a);
+  box-shadow: 0 10px 28px #d8724a;
+  margin: 30px auto;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -62%);
+}
+
+
+/*--------------------
+screen
+--------------------*/
+.screen {
+  background: #fff;
+  padding: 15px 28px;
+  height: 69px;
+  text-align: right;
+  font-size: 29px;
+  color: #4c455a;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 2px 3px #d8724a;
+  transition: color .6s ease-in-out;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+}
+
+
+/*--------------------
+Buttons
+--------------------*/
+.buttons {
+
+  & button {
+    float: right;
+    border: none;
+    background: transparent;
+    color: #fff;
+    padding: 15px 10px;
+    outline: none;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    focus: none!important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);;
+    }
+
+    &:active, &.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+    }
+
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  & .numbers {
+    float: left;
+    width: 75%;
+    padding: 10px;
+
+    & button {
+      width: 33.3333%;
+      padding: 18px 10px;
+    }
+  }
+
+  & .operators {
+    float: right;
+    width: 25%;
+    padding: 16px 10px 10px;
+    background: rgba(0, 0, 0, 0.1);
+    min-height: 260px;
+
+    & button {
+      width: 100%;
+      padding: 11px 10px;
+      
+      &[data-val="x"] {
+        font-size: 13px;
+      }
+      
+      &[data-val="-"] {
+        font-size: 18px;
+      }
+
+      &[data-val="="] {
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+
+
+
